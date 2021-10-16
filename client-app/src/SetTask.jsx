@@ -6,8 +6,14 @@ import Row from "react-bootstrap/esm/Row";
 import Col from 'react-bootstrap/Col';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form'
-function SetTask() {
+import SuburbText from "./SuburbText";
+
+
+
+const SetTask = (props) => {
+
     return <div>
+        <onButton/>
         <Navbar bg="light" expand="lg" variant="light">
             <Container>
                 <Navbar.Brand>Setting up your tasks</Navbar.Brand>
@@ -21,26 +27,17 @@ function SetTask() {
                 For an online task, only date would be appeared.</p>
         </Container>
         <Container>
-            <Row>
-                <Col>
-                    <h3>Suburb</h3>
-                </Col>
-                <Col>
-                    <FloatingLabel controlId="floatingTextarea" label="Task Titile" className="mb-3">
-                        <Form.Control as="textarea" placeholder="Enter a suburb" />
-                    </FloatingLabel>
-                </Col>
-            </Row>
+            <SuburbText />
             <br />
             <Row>
                 <Col>
                     <h3>Date</h3>
                 </Col>
                 <Col>
-                    <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                    <FloatingLabel controlId="floatingTextarea2" label="Enter a date">
                         <Form.Control
                             as="textarea"
-                            placeholder="Enter the date"                            
+                            placeholder="Enter the date"
                         />
                     </FloatingLabel>
                 </Col>

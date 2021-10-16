@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-import InputGroup from 'react-bootstrap/InputGroup'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import InPersonButton from "./InPersonButton";
+import OnlineButton from "./OnlineButton";
 function NewTask() {
     return <div>
         <Navbar bg="light" expand="lg" variant="light">
@@ -18,30 +19,14 @@ function NewTask() {
                 <Col><h3>Select Task Type:</h3></Col>
                 <Col>
                     <Container>
-                        <Row>
-                            <Col>
-                                <InputGroup>
-                                    <InputGroup.Radio />
-                                </InputGroup>
-                            </Col>
-                            <Col>
-                                <p>Inperson</p>
-                            </Col>
-                            <Col>
-                                <InputGroup>
-                                    <InputGroup.Radio />
-                                </InputGroup>
-                            </Col>
-                            <Col>
-                                <p>Online</p>
-                            </Col>
-                        </Row>
+                        <InPersonButton/>
+                        <OnlineButton/>
                     </Container>
                 </Col>
             </Row>
 
         </Container>
-        <br/>
+        <br />
     </div>
 }
 

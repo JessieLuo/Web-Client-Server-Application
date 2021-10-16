@@ -1,6 +1,6 @@
 const express = require("express")
 const https = require("https")
-const User = require("./models/User");
+const Task = require("./Model/Task");
 const mongoose = require("mongoose")
 const cors = require("cors")
 
